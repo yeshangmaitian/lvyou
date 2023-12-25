@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>主页面</title>
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css"/>
+</head>
+<body>
+<!--    <h1>login successfully</h1>-->
+    <h3 th:utext="${msg}"></h3>
+    <div id="header">
+        <h1>小希旅游公司</h1>
+    </div>
+    <div id="main">
+        <div class="option">
+            <ul class="list">
+                <li>——操作选项——</li>
+                <li><a href="/homeU">主页</a></li>
+                <li><a href="/selectMU">查询订单</a></li>
+                <li><a href="/addMU">添加订单</a></li>
+                <li><a href="/updateMU">修改订单</a></li>
+                <hr>
+                <li><a href="/selectPU">查询景点</a></li>
+                <li><a href="/addPU">增加景点</a></li>
+                <hr>
+                <li><a href="/selectTU">查询游客</a></li>
+                <li><a href="/addTU">添加游客</a></li>
+                <li><a href="/updateTU">更新游客</a></li>
+                <li><a href="/deleteTU">删除游客</a></li>
+                <hr>
+                <li><a href="/selectTeamU">查询旅游团</a></li>
+                <li><a href="/addTeamU">增加旅游团</a></li>
+                <hr>
+                <li><a href="/selectRU">查询路线</a></li>
+                <li><a href="/addRU">增加路线</a></li>
+                <hr>
+                <li><a href="/selectU">查询管理员</a></li>
+                <li><a href="/addU">添加管理员</a></li>
+                <li><a href="/loginU">重新登录</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>公司简介：小希旅游公司成立于1989年，是经国家旅游局批准的具有经营出境、入境、国内旅游资格的国际旅行社，
+                许可证编号为l-hun-cj00008。是中国省从事旅游业务最早，综合接待实力最强的专业旅游公司之一，全国百强旅行社，
+                在旅行社信誉等级评估中多次被评为a级信誉旅行社，是首批五星级旅行社。 </p>
+            <p>多年来，先进的经营理念、专业的营销队伍、规范的操作模式、敬业的导游人才、完善的售后服务，得到市场和游客的高度好评，
+                成为我国名副其实的经营出境旅游、国内旅游、入境旅游的专业、诚信的大型旅游服务机构。</p>
+        </div>
+    </div>
+    <div id="footer">
+        <div>游的开心，玩的舒心！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--小希旅游公司</div>
+        <address>通讯地址:中关村南大街27号中央民族大学&nbsp;&nbsp;电话:(010)62781733&nbsp;&nbsp;网管信箱:tianye@163.com</address>
+    </div>
+</body>
+</html>

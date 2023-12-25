@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>查询旅游团</title>
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css"/>
+</head>
+<body>
+    <div id="header">
+        <h1>小希旅游公司</h1>
+    </div>
+    <div id="main">
+        <div class="option">
+            <ul class="list">
+                <li>——操作选项——</li>
+                <li><a href="/home">首页</a></li>
+                <li><a href="/selectM">查询订单</a></li>
+                <li><a href="/selectP">查询景点</a></li>
+                <li><a href="/selectR">查询路线</a></li>
+                <li><a href="/addM">添加订单</a></li>
+                <li><a href="/update">修改订单</a></li>
+                <li><a href="/updateT">修改个人信息</a></li>
+                <li><a href="/login">退出登录</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <form action="/selectTeam1" method="post">
+                <button type="submit">查询所有旅游团信息</button>
+            </form>
+            <span th:utext="${msg}"></span></br>
+            <span th:utext="${rs}"></span></br>
+        </div>
+    </div>
+    <div id="footer">
+        <div>游的开心，玩的舒心！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--小希旅游公司</div>
+        <address>通讯地址:中关村南大街27号中央民族大学&nbsp;&nbsp;电话:(010)62781733&nbsp;&nbsp;网管信箱:tianye@163.com</address>
+    </div>
+</body>
+</html>

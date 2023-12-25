@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css"/>
+</head>
+<body>
+    <div id="header">
+        <h1>小希旅游公司</h1>
+    </div>
+    <div id="register">
+        <p>开始注册游客信息</p>
+        <form action="/register1" method="post">
+            *游客编号：<input type="number" name="num" th:value="${num}"><br>
+            *姓名：<input type="text" name="name" th:value="${name}"><br>
+            *密码：<input type="text" name="pwd" th:value="${pwd}"><br>
+            *性别（"男"或"女"）：<input type="text" name="sex" th:value="${sex}"><br>
+            *年龄：<input type="number" name="age" th:value="${age}"><br>
+            *电话：<input type="text" name="phone" th:value="${phone}"><br>
+            紧急联系人电话：<input type="text" name="ephone" th:value="${ephone}"><br>
+            <span id="msg" th:utext="${msg}"></span><br>
+            <input type="submit" value="注册">
+            <a href="/login"><input type="button" value="登录"></a>
+            <input type="reset" value="重置"><br>
+
+        </form>
+    </div>
+    <div id="footer">
+        <div>游的开心，玩的舒心！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--小希旅游公司</div>
+        <address>通讯地址:中关村南大街27号中央民族大学&nbsp;&nbsp;电话:(010)62781733&nbsp;&nbsp;网管信箱:tianye@163.com</address>
+    </div>
+</body>
+</html>

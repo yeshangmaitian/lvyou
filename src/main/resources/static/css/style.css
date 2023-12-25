@@ -1,0 +1,53 @@
+#msg{
+    color: red;
+}
+*{
+    text-align: center;
+    position: center;
+    color: #000000;
+}
+#main{
+    display:flex;
+    flex-flow:row wrap;
+}
+.option{
+    flex:1;
+    margin-right: 30px;
+    border-right: #fab3b3 1px solid;
+}
+.content{
+    flex: 5;
+    margin: auto;
+    height: 100%;
+}
+table{
+    border: white 1px solid;
+    position: center;
+    text-align: center;
+    margin: auto;
+}
+table,td,th {
+    text-align: center;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px 30px;
+}
+.list{
+    list-style: none;
+}
+a{
+    text-decoration:none;
+}
+li{
+    height: 25px;
+    text-align: left;
+}
+#footer{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    background-color: white;
+ }

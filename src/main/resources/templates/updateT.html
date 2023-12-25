@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>更新个人信息</title>
+  <link rel="stylesheet" href="../static/css/style.css" type="text/css"/>
+</head>
+<body>
+  <div id="header">
+    <h1>小希旅游公司</h1>
+  </div>
+  <div id="main">
+    <div class="option">
+      <ul class="list">
+        <li>——操作选项——</li>
+        <li><a href="/home">首页</a></li>
+        <li><a href="/selectM">查询订单</a></li>
+        <li><a href="/selectP">查询景点</a></li>
+        <li><a href="/selectR">查询路线</a></li>
+        <li><a href="/selectTeam">查询旅游团</a></li>
+        <li><a href="/addM">添加订单</a></li>
+        <li><a href="/update">修改订单</a></li>
+        <li><a href="/login">退出登录</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <p>开始更新游客信息</p>
+      <form action="updateT1" method="post">
+        *姓名：<input type="text" name="name" th:value="${name}"></br>
+        *密码：<input type="text" name="pwd" th:value="${pwd}"></br>
+        *性别：<input type="text" name="sex" th:value="${sex}"></br>
+        *电话：<input type="text" name="phone" th:value="${phone}"></br>
+        *年龄：<input type="number" name="age" th:value="${age}"></br>
+        <span id="msg" th:utext="${msg}"></span></br>
+        <input type="submit" value="更新">
+        <input type="reset" value="重置">
+      </form>
+    </div>
+  </div>
+  <div id="footer">
+    <div>游的开心，玩的舒心！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--小希旅游公司</div>
+    <address>通讯地址:中关村南大街27号中央民族大学&nbsp;&nbsp;电话:(010)62781733&nbsp;&nbsp;网管信箱:tianye@163.com</address>
+  </div>
+</body>
+</html>

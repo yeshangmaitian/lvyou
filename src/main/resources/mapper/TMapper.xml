@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.lvyou.mapper.TUserMapper">
+    <select id="loginT" resultType="com.example.lvyou.bean.TUserBean">
+        select * from tuser where tname=#{tname} and tpwd=#{tpwd};
+    </select>
+    <select id="selectTU" resultType="com.example.lvyou.bean.TUserBean">
+        select * from tuser;
+    </select>
+    <delete id="deleteTU">
+        delete from tuser where tname=#{tname} and tpwd=#{tpwd};
+    </delete>
+    <update id="updateTU">
+        update tuser set tsex=#{tsex},tphone=#{tphone},tage=#{tage} where tname=#{tname} and tpwd=#{tpwd};
+    </update>
+</mapper>

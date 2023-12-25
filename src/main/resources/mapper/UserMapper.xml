@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.lvyou.mapper.AUserMapper">
+
+    <select id="loginU" resultType="com.example.lvyou.bean.AUserBean">
+        select * from auser where aname=#{aname} and apwd=#{apwd}
+    </select>
+
+    <select id="selectU" resultType="com.example.lvyou.bean.AUserBean">
+        select * from auser;
+    </select>
+
+    <insert id="addU">
+        insert into auser(aid,aname,apwd,adate,asalary,aother) values(#{aid},#{aname},#{apwd},#{adate},#{asalary},#{aother});
+    </insert>
+
+    <insert id="addTU">
+        insert into tuser(tnum,tname,tpwd,tsex,tage,tphone,tephone) values(#{tnum},#{tname},#{tpwd},#{tsex},#{tage},#{tphone},#{tephone});
+    </insert>
+
+    <select id="selectPU" resultType="com.example.lvyou.bean.PlaceBean">
+        select * from place;
+    </select>
+
+    <insert id="addPU">
+        insert into place(placenum,placename,place,star,ticket,placeother) values(#{placenum},#{placename},#{place},#{star},#{ticket},#{placeother});
+    </insert>
+
+    <select id="selectTeamU" resultType="com.example.lvyou.bean.TeamBean">
+        select * from team;
+    </select>
+
+    <insert id="addTeamU">
+        insert into team(teamnum,teamname,teamphone,teamrnum,teamother) values(#{teamnum},#{teamname},#{teamphone},#{teamrnum},#{teamother});
+    </insert>
+
+    <select id="selectRU" resultType="com.example.lvyou.bean.RouteBean">
+        select * from route;
+    </select>
+
+    <insert id="addRU">
+        insert into route(routenum,specialplace,begin,end,longtime) values(#{routenum},#{specialplace},#{begin},#{end},#{longtime});
+    </insert>
+
+    <select id="selectMU" resultType="com.example.lvyou.bean.ManageBean">
+        select * from manage;
+    </select>
+
+    <insert id="addMU">
+        insert into manage(mnum,tusernum,teamnum,manage,mdate,mother) values(#{mnum},#{tusernum},#{teamnum},#{manage},#{mdate},#{mother});
+    </insert>
+
+    <update id="updateMU">
+        update manage set teamnum=#{teamnum},manage=#{manage},mdate=#{mdate},mother=#{mother} where tusernum=#{tusernum} and mnum=#{mnum};
+    </update>
+
+    <select id="selectMUmanage" resultType="com.example.lvyou.bean.ManageBean">
+        select * from manage where manage=#{manage};
+    </select>
+
+    <select id="selectMUteamnum" resultType="com.example.lvyou.bean.ManageBean">
+        select * from manage where teamnum=#{teamnum};
+    </select>
+
+    <select id="selectMUteamnum_manage" resultType="com.example.lvyou.bean.ManageBean">
+        select * from manage where manage=#{manage} and teamnum=#{teamnum};
+    </select>
+
+    <select id="selectMUtusernum_manage" resultType="com.example.lvyou.bean.ManageBean">
+        select * from manage where manage=#{manage} and tusernum=#{tusernum};
+    </select>
+</mapper>
