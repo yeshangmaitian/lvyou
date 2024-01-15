@@ -9,5 +9,4 @@ class LvyouApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
